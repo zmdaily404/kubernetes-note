@@ -1,1 +1,10 @@
+# ServiceAccount资源
+### Kubernetes基于三个组件完成Pod上sa的自动化
+ServiceAccount Admission Controller：
++ 为每个名称空间生成一个默认的default ServiceAccount及其依赖到的Secret对象
++ 为未定义serviceAccountName的Pod资源自动附加名称空间下的serviceaccounts/default
++ 为定义了serviceAccountName的Pod资源检查其引用的目标对象是否存在
 
+Token Controller
+
+ServiceAccount Controller
